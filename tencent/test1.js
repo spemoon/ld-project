@@ -103,6 +103,15 @@
                 query[temp[0]] = temp[1];
             }
             return query;
+        },
+        trim : function(str) {
+            return str.replace(/(^\s*)|(\s*$)/g, '');
+        },
+        ltrim : function(str) {
+            return str.replace(/(^\s*)/g, '');
+        },
+        rtrim : function(str) {
+            return str.replace(/(\s*$)/g, '');
         }
 
     }
@@ -128,5 +137,8 @@
     }
     console.log(helper.clone(obj));
     console.log(helper.parseQueryString("http://witmax.cn/index.php?key0=0&key1=1&key2=2"));
+    console.log(helper.trim("              http://witmax.cn/index.php?key0=0&key1=1&key2=2            "));
+    console.log(helper.ltrim("              http://witmax.cn/index.php?key0=0&key1=1&key2=2            "));
+    console.log(helper.rtrim("              http://witmax.cn/index.php?key0=0&key1=1&key2=2            "));
 
 })();
