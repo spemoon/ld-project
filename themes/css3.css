@@ -1,0 +1,14 @@
+@charset UTF-8;
+.message-item{-webkit-border-image:url(images/test.jpg) 27 repeat repeat;width:200px}
+#loading{
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out 0s;
+    -webkit-palm-mouse-target: ignore;
+    background: url(images/load-fade.png) left top repeat-x;
+}
